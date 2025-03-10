@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robo Walk | Game v1</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="gameMap">
+    </div>
+    <div class="controls">
+    <button onclick="
+               if(robotLeft*STEP>0) {
+                 robotLeft--
+              }
+               render()
+    ">◀</button>                     
+    <button onclick="
+               if(robotLeft*STEP<innerWidth - 3*STEP) {
+                  robotLeft++
+              }
+            //console.log(robotLeft)
+            render()
+    ">▶</button>     
+    </div>
+  <script src="game.js"></script>  
+</body>
+</html>
